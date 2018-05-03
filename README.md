@@ -60,19 +60,20 @@
 
 * 功能：邮件体类实例化一封邮件，并可以自定义给邮件添加标头、段落标题、文本、图片、段落、附件，可根据需求添加，如果附件有图片文件，则将图片文件显示在正文结尾，不在附件列表中添加
 
-	emailbody = EmailBody(subject, to_address_list, author)  #实例化EmailBody
-    	emailbody.attachHeader("header", "20", 'blue', 0)        #给邮件添加标头，大小为20，颜色为蓝色
-    	emailbody.attachTitle("title", "10", 'red', 0)           #添加标题
-    	emailbody.attachPara(textStr)                            #添加段落
-    	emailbody.attachPic("D:/pic1.jpg")                       #添加一副图片
 
-    	emailbody.attachBody()                                   #将正文附加到整个邮件                 
+		emailbody = EmailBody(subject, to_address_list, author)  #实例化EmailBody
+    		emailbody.attachHeader("header", "20", 'blue', 0)        #给邮件添加标头，大小为20，颜色为蓝色
+    		emailbody.attachTitle("title", "10", 'red', 0)           #添加标题
+    		emailbody.attachPara(textStr)                            #添加段落
+    		emailbody.attachPic("D:/pic1.jpg")                       #添加一副图片
 
-    	input_file = codecs.open("D://cleanupDisk.md", mode="r", encoding="utf-8")
-    	text = input_file.read()
-    	emailbody.attachMd(text)                                 #添加一段markdown文本
+    		emailbody.attachBody()                                   #将正文附加到整个邮件                 
 
-	emailbody.attachImageList(imgList)                       #将附件里的图片显示在正文结尾
+    		input_file = codecs.open("D://cleanupDisk.md", mode="r", encoding="utf-8")
+    		text = input_file.read()
+    		emailbody.attachMd(text)                                 #添加一段markdown文本
+
+		emailbody.attachImageList(imgList)                       #将附件里的图片显示在正文结尾
 
 
 
