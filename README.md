@@ -83,9 +83,9 @@
 * 功能：连接服务器，登录邮箱，将邮件以str格式进行发送
 
 		def sendEmail(emailbody,to_address_list):
-		smtp = smtplib.SMTP('smtp.exmail.qq.com')
-		smtp.login('**邮箱名称**', '**邮箱密码**')
-		try:
-			smtp.sendmail('**收件人**', to_address_list, emailbody.msg_str())
-		finally:
-			smtp.close()
+			smtp = smtplib.SMTP('smtp.exmail.qq.com')
+			smtp.login('**邮箱名称**', '**邮箱密码**')
+			try:
+				smtp.sendmail('**收件人**', to_address_list, emailbody.msg_str())
+			finally:
+				smtp.close()
